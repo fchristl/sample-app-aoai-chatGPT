@@ -252,9 +252,9 @@ export const Answer = ({ answer, onCitationClicked, onExectResultClicked }: Prop
                 linkTarget="_blank"
                 remarkPlugins={[remarkGfm, supersub]}
                 children={
-                  SANITIZE_ANSWER
+                  (SANITIZE_ANSWER
                     ? DOMPurify.sanitize(parsedAnswer.markdownFormatText, { ALLOWED_TAGS: XSSAllowTags, ALLOWED_ATTR: XSSAllowAttributes })
-                    : parsedAnswer.markdownFormatText
+                    : parsedAnswer.markdownFormatText) + "\n\n\n[How happy are you with this chatbot?](https://allianzgsmd1.qualtrics.com/jfe/form/SV_9uHELqPlEQZthpI)"
                 }
                 className={styles.answerText}
                 components={components}
