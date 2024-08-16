@@ -252,13 +252,16 @@ export const Answer = ({ answer, onCitationClicked, onExectResultClicked }: Prop
                 linkTarget="_blank"
                 remarkPlugins={[remarkGfm, supersub]}
                 children={
-                  (SANITIZE_ANSWER
+                  SANITIZE_ANSWER
                     ? DOMPurify.sanitize(parsedAnswer.markdownFormatText, { ALLOWED_TAGS: XSSAllowTags, ALLOWED_ATTR: XSSAllowAttributes })
-                    : parsedAnswer.markdownFormatText) + "\n\n\n[How happy are you with this chatbot?](https://allianzgsmd1.qualtrics.com/jfe/form/SV_9uHELqPlEQZthpI)"
+                    : parsedAnswer.markdownFormatText
                 }
                 className={styles.answerText}
                 components={components}
               />
+              <div className={styles.answerText}>
+                <p><a href="https://allianzgsmd1.qualtrics.com/jfe/form/SV_9uHELqPlEQZthpI">How much do you like this chatbot?</a></p>
+              </div>
             </Stack.Item>
             <Stack.Item className={styles.answerHeader}>
               {FEEDBACK_ENABLED && answer.message_id !== undefined && (
