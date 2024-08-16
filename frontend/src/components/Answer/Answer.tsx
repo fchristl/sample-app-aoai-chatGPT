@@ -259,9 +259,6 @@ export const Answer = ({ answer, onCitationClicked, onExectResultClicked }: Prop
                 className={styles.answerText}
                 components={components}
               />
-              <div className={styles.answerText}>
-                <p><a href="https://allianzgsmd1.qualtrics.com/jfe/form/SV_9uHELqPlEQZthpI">How much do you like this chatbot?</a></p>
-              </div>
             </Stack.Item>
             <Stack.Item className={styles.answerHeader}>
               {FEEDBACK_ENABLED && answer.message_id !== undefined && (
