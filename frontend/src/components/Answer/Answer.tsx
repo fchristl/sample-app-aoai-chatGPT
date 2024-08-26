@@ -262,7 +262,7 @@ export const Answer = ({ answer, onCitationClicked, onExectResultClicked }: Prop
               {parsedAnswer.markdownFormatText &&
                 <div>
                   <p>
-                    <a href="https://allianzgsmd1.qualtrics.com/jfe/form/SV_9uHELqPlEQZthpI">How useful is this chatbot?</a>
+                    <a href="https://allianzgsmd1.qualtrics.com/jfe/form/SV_9uHELqPlEQZthpI">Give us feedback!</a>
                   </p>
                 </div>}
             </Stack.Item>
