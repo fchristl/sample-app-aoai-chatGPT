@@ -242,6 +242,10 @@ export const Answer = ({ answer, onCitationClicked, onExectResultClicked }: Prop
       )
     }
   }
+
+
+  const openQuestionnaire = () => window.open("https://allianzgsmd1.qualtrics.com/jfe/form/SV_9uHELqPlEQZthpI", "_blank", "popup=true");
+
   return (
     <>
       <Stack className={styles.answerContainer} tabIndex={0}>
@@ -262,7 +266,7 @@ export const Answer = ({ answer, onCitationClicked, onExectResultClicked }: Prop
               {parsedAnswer.markdownFormatText &&
                 <div>
                   <p>
-                    <a href="https://allianzgsmd1.qualtrics.com/jfe/form/SV_9uHELqPlEQZthpI" target="_blank">Give us feedback!</a>
+                    <a onClick={openQuestionnaire}>Give us feedback!</a>
                   </p>
                 </div>}
             </Stack.Item>
