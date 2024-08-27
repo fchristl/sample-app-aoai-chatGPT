@@ -267,9 +267,9 @@ export const Answer = ({ answer, onCitationClicked, onExectResultClicked }: Prop
                 components={components}
               />
               {parsedAnswer.markdownFormatText &&
-                <div>
-                  <p>
-                    <a href="#" onClick={openQuestionnaire}>Give us feedback!</a>
+                <div style={{ marginLeft: "11px" }}>
+                  <p style={{ marginLeft: 0 }}>
+                    <a style={{ paddingLeft: 0 }} href="#" onClick={openQuestionnaire}>Give us feedback!</a>
                   </p>
                 </div>}
             </Stack.Item>
