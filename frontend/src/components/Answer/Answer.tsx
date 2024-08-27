@@ -1,4 +1,4 @@
-import { FormEvent, useContext, useEffect, useMemo, useState } from 'react'
+import { FormEvent, MouseEvent, useContext, useEffect, useMemo, useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { nord } from 'react-syntax-highlighter/dist/esm/styles/prism'
@@ -244,7 +244,10 @@ export const Answer = ({ answer, onCitationClicked, onExectResultClicked }: Prop
   }
 
 
-  const openQuestionnaire = () => window.open("https://allianzgsmd1.qualtrics.com/jfe/form/SV_9uHELqPlEQZthpI", "_blank", "popup=true");
+  const openQuestionnaire = (e: MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.open("https://allianzgsmd1.qualtrics.com/jfe/form/SV_9uHELqPlEQZthpI", "_blank", "popup=true");
+  }
 
   return (
     <>
@@ -266,7 +269,7 @@ export const Answer = ({ answer, onCitationClicked, onExectResultClicked }: Prop
               {parsedAnswer.markdownFormatText &&
                 <div>
                   <p>
-                    <a onClick={openQuestionnaire}>Give us feedback!</a>
+                    <a href="#" onClick={openQuestionnaire}>Give us feedback!</a>
                   </p>
                 </div>}
             </Stack.Item>
