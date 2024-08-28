@@ -43,9 +43,9 @@ class _UiSettings(BaseSettings):
 
     title: str = "Frontend GPT"
     logo: Optional[str] = None
-    chat_logo: Optional[str] = None
+    chat_logo: Optional[str] = "/static/chat.png"
     chat_title: str = "Start chatting"
-    chat_description: str = "This chatbot is configured to answer your questions"
+    chat_description: str = "Hi, I'm the Frontend GPT Bot, your on-demand expert specializing in knowledge that helps you increase the maturity of your digital products. Whether you need help mastering the Allianz Design System, ensuring top-notch frontend quality, enhancing digital accessibility, conducting insightful user research, or managing Angular assets, I'm here to guide you!"
     favicon: str = "/favicon.ico"
     show_share_button: bool = True
     show_chat_history_button: bool = True
