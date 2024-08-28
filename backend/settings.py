@@ -42,7 +42,7 @@ class _UiSettings(BaseSettings):
     )
 
     title: str = "Frontend GPT"
-    logo: Optional[str] = None
+    logo: Optional[str] = "/static/allianz_logo.svg"
     chat_logo: Optional[str] = "/static/chat.png"
     chat_title: str = "Start chatting"
     chat_description: str = "Hi, I'm the Frontend GPT Bot, your on-demand expert specializing in knowledge that helps you increase the maturity of your digital products. Whether you need help mastering the Allianz Design System, ensuring top-notch frontend quality, enhancing digital accessibility, conducting insightful user research, or managing Angular assets, I'm here to guide you!"
